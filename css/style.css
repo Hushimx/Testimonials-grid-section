@@ -1,0 +1,129 @@
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  background-color: #edf2f8;
+  font-weight: 600;
+}
+.continer {
+  display: grid;
+  grid-template-columns: repeat(12, auto);
+  grid-template-rows: repeat(2, auto);
+  gap: 22px;
+  width: 60%;
+}
+.textpic {
+  display: flex;
+
+}
+.textpic , .text {
+  background-color: transparent !important;
+
+}
+.avatar {
+  border-radius: 50%;
+  border: 2px solid white;
+    width: 47px;
+}
+.continer div {
+  grid-column: span 2;
+  background-color: hsl(0, 0%, 100%);
+  color: black;
+  border-radius: 15px;
+  padding: 10px;
+  font-weight: bold;
+
+}
+.one span , .two span , .five span {
+  color: white !important;
+}
+.one {
+  position: relative;
+  grid-column: span 8 !important;
+  background-color: hsl(263, 55%, 52%) !important;
+  color: hsl(0, 0%, 100%) !important;
+  z-index: -1;
+
+}
+.one::after {
+  content: "";
+  position: absolute;
+  background-image: url(bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  top : 2%;
+  right: 0;
+  width: 200px;
+  height: 200px;
+  z-index: -1;
+}
+.two {
+  background-color: hsl(217, 19%, 35%) !important;
+  color: hsl(0, 0%, 100%) !important;
+
+}
+.three {
+  grid-column: span 2 !important;
+  grid-row: span 2;
+}
+.five {
+  grid-column: span 8 !important;
+  background-color: hsl(219, 29%, 14%) !important;
+  color: hsl(0, 0%, 100%) !important;
+
+}
+span {
+  position: relative;
+  display: block; 
+  z-index: 999;
+
+}
+.h {
+  font-size: 19px;
+}
+.s {
+  opacity: 0.5;
+}
+.tag {
+  opacity: 0.5;
+}
+@media (max-width: 767px) {
+  .continer {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(5, auto);
+    width: 100%;
+    padding: 60%;
+    margin-top: 200%;
+  }
+  .continer div {
+    position: relative;
+    background-color: hsl(0, 0%, 100%);
+    color: black;
+    border-radius: 15px;
+    padding: 10px;
+    font-weight: bold;
+    width: 300px;
+    
+  
+  }
+  .one {
+    grid-column: unset !important;
+  }
+  .one::after {
+    top : 5%;
+  }
+  
+  .three {
+    grid-column: unset !important;
+    grid-row: unset !important;
+  }
+  .five {
+    grid-column: unset !important;
+  }
+}
